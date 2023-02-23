@@ -10,4 +10,8 @@ module "arewewebyet_org" {
   CNAME = {
     "www" = ["rust-lang.github.io."],
   }
+
+  CAA = {
+    "@" = ["0 iodef \"mailto:infra@rust-lang.org\""]
+  }
 }

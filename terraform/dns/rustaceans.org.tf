@@ -14,5 +14,9 @@ module "rustaceans_org" {
   CNAME = {
     "www" = ["rustaceans.org."],
   }
+
+  CAA = {
+    "@" = ["0 iodef \"mailto:infra@rust-lang.org\""]
+  }
 }
 

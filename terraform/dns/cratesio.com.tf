@@ -9,4 +9,8 @@ module "cratesio_com" {
   domain  = "cratesio.com"
   comment = "parked and reserved for future use"
   ttl     = 300
+
+  CAA = {
+    "@" = ["0 iodef \"mailto:infra@rust-lang.org\""]
+  }
 }

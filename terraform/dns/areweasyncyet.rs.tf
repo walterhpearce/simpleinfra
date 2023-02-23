@@ -10,4 +10,8 @@ module "areweasyncyet_rs" {
   A = {
     "@" = local.github_pages_ipv4, # Defined in _shared.tf
   }
+
+  CAA = {
+    "@" = ["0 iodef \"mailto:infra@rust-lang.org\""]
+  }
 }

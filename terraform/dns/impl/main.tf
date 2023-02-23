@@ -51,3 +51,13 @@ resource "aws_route53_record" "mx" {
   ttl     = var.ttl
   records = each.value
 }
+
+resource "aws_route53_record" "caa" {
+  for_each = var.CAA
+
+  zone_id = aws_route53_zone.zone.id
+  name    = each.key == "@" ? "${var.domain}." : "${each.key}.${var.domain}."
+  type    = "CAA"
+  ttl     = var.ttl
+  records = each.value
+}

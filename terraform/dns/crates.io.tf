@@ -27,4 +27,9 @@ module "crates_io" {
     "mailo._domainkey" = ["k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDu3zVBL/h7U1maoWkGJMi5Gd6OGhqsuBt19o3cRrkaxI1+XMJw9GIPXSc9BZZruVOICJ2Y1SJI2A2SPGIIa9CqYhlyPEcL5AvtoaORX+VjlsPXcdoUH4eX5fjjrWRn8PlWqBrILTRVkhMrz6luFMmzmmHpHC0WbwIQ7QZgnexn5wIDAQAB"],
     "_dmarc"           = ["v=DMARC1; p=none; rua=mailto:dmarc-rua@rust-lang.org; fo=1; ruf=mailto:dmarc-rua@rust-lang.org"],
   }
+
+  CAA = {
+    "@" = ["0 issuewild \"amazontrust.com\""],
+    "@" = ["0 iodef \"mailto:infra@rust-lang.org\""]
+  }
 }

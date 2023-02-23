@@ -32,4 +32,8 @@ module "rustconf_com" {
     "@"             = [local.mailgun_spf],
     "k1._domainkey" = ["k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC6AVUUbCl/Ofx/ceeWryb4v//f/Sr5UGrRt4ibA4UY2JQ3Db++KEBsdur5qAxC9eiWeAbYQyfQhFGagbmLjyxd1eNepzAIPesz81U0hodsLCaKs7OHkLrQJcTRxVYwucL5rBXVLdAhg7A1veVeN1xiqh8HmEull5vYsmOknf6mtwIDAQAB"],
   }
+
+  CAA = {
+    "@" = ["0 iodef \"mailto:infra@rust-lang.org\""]
+  }
 }
